@@ -21,7 +21,7 @@ onMounted(async ()=>{
     // console.log('totot', userId)
     // console.log('tot chto ', window.Telegram?.WebApp?.initDataUnsafe?.user?.id)
     const userId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id
-    // const userId = 1234
+     //const userId = 1234
     console.log(' tot',userId.toString())
     if (userId){
         try{

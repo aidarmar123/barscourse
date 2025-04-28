@@ -82,7 +82,7 @@ export const useTestsStore = defineStore('tests', () => {
 
     const getId = async () => {
         const tg_Id = window.Telegram?.WebApp?.initDataUnsafe?.user?.id
-        // const tg_id = 1234
+        //const tg_id = 1234
 
         try {
             const response = await axios.post('https://654f-185-77-216-6.ngrok-free.app/api/Users/authenticate', {
@@ -112,7 +112,7 @@ export const useTestsStore = defineStore('tests', () => {
         loading.value = true
         const tg_id = window.Telegram?.WebApp?.initDataUnsafe?.user?.id
         // тут исправить
-        // const tg_id = 1234
+        //const tg_id = 1234
         try {
             const response = await axios.post('https://654f-185-77-216-6.ngrok-free.app/api/Users/authenticate', {
                 tgId: tg_id.toString()
@@ -130,9 +130,8 @@ export const useTestsStore = defineStore('tests', () => {
     const getResult = async (id) => {
         spanWidth.value = 0
         try {
-            const response = await fetch(`https://654f-185-77-216-6.ngrok-free.app/api/TestResult/user/${id}`,{
-                method: 'GET',
-                mode: 'cors',
+            const tgId = id.toString();
+            const response = await fetch(`https://654f-185-77-216-6.ngrok-free.app/api/TestResult/user/${tgId}`,{
                 credentials: 'include'
             });
 
